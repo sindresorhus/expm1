@@ -1,14 +1,14 @@
 import test from 'ava';
 
 Math.expm1 = undefined;
-const m = require('./');
+const expm1 = require('.');
 
-test(t => {
-	t.is(m(0), 0);
-	t.is(m(-1), -0.6321205588285577);
-	t.is(m(1), 1.718281828459045);
-	t.is(m(0), 0);
-	t.is(m(-0), -0);
-	t.is(m(Infinity), Infinity);
-	t.is(m(-Infinity), -1);
+test('main', t => {
+	t.is(expm1(0), 0);
+	t.is(expm1(-1), -0.6321205588285577);
+	t.is(expm1(1), 1.718281828459045);
+	t.is(expm1(0), 0);
+	t.is(expm1(-0), -0);
+	t.is(expm1(Infinity), Infinity);
+	t.is(expm1(-Infinity), -1);
 });

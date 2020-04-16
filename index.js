@@ -1,4 +1,5 @@
 'use strict';
-module.exports = Math.expm1 || function (x) {
+
+module.exports = function (x) {
 	return Math.exp(x) - 1;
 };
